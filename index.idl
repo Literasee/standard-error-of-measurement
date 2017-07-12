@@ -1,1 +1,34 @@
 # standard-error-of-measurement
+
+[var name:"randomSeed" value:1 /]
+
+[section]
+
+[waypoint center:true]
+To create a "screen" of text you can wrap
+blocks in `[waypoint]Text here[/waypoint]` tags.
+
+If you want the text vertically centered
+on the page use `[waypoint center:true]` for the opening tag.
+[/waypoint]
+
+[waypoint]
+The waypoint component is extremely basic right now
+and will evolve. We will also likely create a custom
+chart to sit over there on the side.
+
+The one currently there does not change at the moment.
+This slider will update the `randomSeed` var though.
+[Range min:0 max:50 value:randomSeed /]
+[/waypoint]
+
+[waypoint]
+One more waypoint for good measure
+[/waypoint]
+
+[/section]
+
+[fixed]
+randomSeed var is: [DisplayVar var:randomSeed /]
+[Chart type:"scatter" randomSeed:randomSeed /]
+[/fixed]
