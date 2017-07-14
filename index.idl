@@ -6,6 +6,11 @@
 [Screen fullBleed:true padding:0 height:0.5 className:"hero"]
   [Img src:"bjbxvz-uyc-jordan-mcqueen.jpg"/]
 [/Screen]
+[Header
+  title:"Standard Error of Measurement"
+  author:"Center for Assessment"
+  authorLink:"http://nciea.org"
+/]
 [/waypoint]
 
 [waypoint center:true]
