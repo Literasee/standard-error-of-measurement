@@ -2,6 +2,12 @@
 
 [section]
 
+[waypoint]
+[Screen fullBleed:true padding:0 height:0.5 className:"hero"]
+  [Img src:"bjbxvz-uyc-jordan-mcqueen.jpg"/]
+[/Screen]
+[/waypoint]
+
 [waypoint center:true]
 Well hello there! To create a "screen" of text you can wrap
 blocks in `[waypoint]Text here[/waypoint]` tags.
