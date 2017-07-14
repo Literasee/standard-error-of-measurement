@@ -1,7 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const Container = require('./container');
-const extend = require('xtend');
 
 class Screen extends React.Component {
   constructor (props) {
@@ -33,7 +32,7 @@ class Screen extends React.Component {
       overlayStyle.backgroundPosition = 'top center';
     }
 
-    let contentContainerStyle = extend({
+    let contentContainerStyle = Object.assign({
       flexDirection: 'column',
       display: 'flex',
       height: '100%',
