@@ -54462,7 +54462,7 @@ var _class = function (_Component) {
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         width: '100vw',
-        height: '100vh'
+        height: (this.props.heightPercent || 100) + 'vh'
       };
 
       return _react2.default.createElement(
