@@ -10327,64 +10327,7 @@ var DisplayVar = function (_IdyllComponent) {
 
 module.exports = DisplayVar;
 
-},{"d3-format":"/app/node_modules/d3-format/build/d3-format.js","idyll-component":"/app/node_modules/idyll-component/lib.js","react":"/app/node_modules/react/react.js"}],"/app/node_modules/idyll-default-components/fixed.js":[function(require,module,exports){
-'use strict';
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var React = require('react');
-var IdyllComponent = require('idyll-component');
-
-var Fixed = function (_IdyllComponent) {
-  _inherits(Fixed, _IdyllComponent);
-
-  function Fixed() {
-    _classCallCheck(this, Fixed);
-
-    return _possibleConstructorReturn(this, (Fixed.__proto__ || Object.getPrototypeOf(Fixed)).apply(this, arguments));
-  }
-
-  _createClass(Fixed, [{
-    key: 'render',
-    value: function render() {
-      return React.createElement('div', { style: { position: 'fixed' }, className: 'fixed' }, this.props.children);
-    }
-  }]);
-
-  return Fixed;
-}(IdyllComponent);
-
-module.exports = Fixed;
-
-},{"idyll-component":"/app/node_modules/idyll-component/lib.js","react":"/app/node_modules/react/react.js"}],"/app/node_modules/idyll-default-components/header.js":[function(require,module,exports){
+},{"d3-format":"/app/node_modules/d3-format/build/d3-format.js","idyll-component":"/app/node_modules/idyll-component/lib.js","react":"/app/node_modules/react/react.js"}],"/app/node_modules/idyll-default-components/header.js":[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -54478,10 +54421,20 @@ var _victoryChart = require("victory-chart");
 
 var _victoryPie = require("victory-pie");exports.Area = _victoryCore.Area;exports.Bar = _victoryCore.Bar;exports.Candle = _victoryCore.Candle;exports.ClipPath = _victoryCore.ClipPath;exports.Curve = _victoryCore.Curve;exports.ErrorBar = _victoryCore.ErrorBar;exports.Line = _victoryCore.Line;exports.Point = _victoryCore.Point;exports.Slice = _victoryCore.Slice;exports.Voronoi = _victoryCore.Voronoi;exports.Flyout = _victoryCore.Flyout;exports.VictoryAnimation = _victoryCore.VictoryAnimation;exports.VictoryArea = _victoryChart.VictoryArea;exports.VictoryAxis = _victoryChart.VictoryAxis;exports.VictoryPolarAxis = _victoryChart.VictoryPolarAxis;exports.VictoryBar = _victoryChart.VictoryBar;exports.VictoryCandlestick = _victoryChart.VictoryCandlestick;exports.VictoryChart = _victoryChart.VictoryChart;exports.VictoryErrorBar = _victoryChart.VictoryErrorBar;exports.VictoryGroup = _victoryChart.VictoryGroup;exports.VictoryLine = _victoryChart.VictoryLine;exports.VictoryLabel = _victoryCore.VictoryLabel;exports.VictoryLegend = _victoryCore.VictoryLegend;exports.VictoryPie = _victoryPie.VictoryPie;exports.VictoryScatter = _victoryChart.VictoryScatter;exports.VictoryStack = _victoryChart.VictoryStack;exports.VictoryTheme = _victoryCore.VictoryTheme;exports.VictoryTransition = _victoryCore.VictoryTransition;exports.VictorySharedEvents = _victoryCore.VictorySharedEvents;exports.VictoryTooltip = _victoryCore.VictoryTooltip;exports.VictoryVoronoi = _victoryChart.VictoryVoronoi;exports.VictoryPortal = _victoryCore.VictoryPortal;exports.Portal = _victoryCore.Portal;exports.VictoryContainer = _victoryCore.VictoryContainer;exports.VictoryClipContainer = _victoryCore.VictoryClipContainer;exports.VictoryZoomContainer = _victoryChart.VictoryZoomContainer;exports.ZoomHelpers = _victoryChart.ZoomHelpers;exports.zoomContainerMixin = _victoryChart.zoomContainerMixin;exports.VictorySelectionContainer = _victoryChart.VictorySelectionContainer;exports.SelectionHelpers = _victoryChart.SelectionHelpers;exports.selectionContainerMixin = _victoryChart.selectionContainerMixin;exports.VictoryBrushContainer = _victoryChart.VictoryBrushContainer;exports.BrushHelpers = _victoryChart.BrushHelpers;exports.brushContainerMixin = _victoryChart.brushContainerMixin;exports.VictoryCursorContainer = _victoryChart.VictoryCursorContainer;exports.CursorHelpers = _victoryChart.CursorHelpers;exports.cursorContainerMixin = _victoryChart.cursorContainerMixin;exports.VictoryVoronoiContainer = _victoryChart.VictoryVoronoiContainer;exports.VoronoiHelpers = _victoryChart.VoronoiHelpers;exports.voronoiContainerMixin = _victoryChart.voronoiContainerMixin;exports.combineContainerMixins = _victoryChart.combineContainerMixins;exports.createContainer = _victoryChart.createContainer;exports.addEvents = _victoryCore.addEvents;exports.Collection = _victoryCore.Collection;exports.Data = _victoryCore.Data;exports.DefaultTransitions = _victoryCore.DefaultTransitions;exports.Domain = _victoryCore.Domain;exports.Events = _victoryCore.Events;exports.Helpers = _victoryCore.Helpers;exports.Log = _victoryCore.Log;exports.PropTypes = _victoryCore.PropTypes;exports.Scale = _victoryCore.Scale;exports.Style = _victoryCore.Style;exports.TextSize = _victoryCore.TextSize;exports.Transitions = _victoryCore.Transitions;exports.Selection = _victoryCore.Selection;exports.LabelHelpers = _victoryCore.LabelHelpers;
 
-},{"victory-chart":"/app/node_modules/victory-chart/lib/index.js","victory-core":"/app/node_modules/victory-core/lib/index.js","victory-pie":"/app/node_modules/victory-pie/lib/index.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/container.js":[function(require,module,exports){
+},{"victory-chart":"/app/node_modules/victory-chart/lib/index.js","victory-core":"/app/node_modules/victory-core/lib/index.js","victory-pie":"/app/node_modules/victory-pie/lib/index.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/cover-image.js":[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -54489,205 +54442,43 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+var _class = function (_Component) {
+  _inherits(_class, _Component);
 
-var Container = function (_React$Component) {
-  _inherits(Container, _React$Component);
+  function _class() {
+    _classCallCheck(this, _class);
 
-  function Container(props) {
-    _classCallCheck(this, Container);
-
-    var _this = _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).call(this, props));
-
-    _this.state = {
-      expandLeft: 0,
-      expandRight: 0
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
   }
 
-  _createClass(Container, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.node = ReactDOM.findDOMNode(this);
-      this.setPosition();
-
-      window.addEventListener('resize', this.setPosition.bind(this));
-    }
-
-    //shouldComponentUpdate (nextProps, nextState) {
-    //return Math.round(nextState.expandLeft) !== Math.round(this.state.expandLeft) ||
-    //Math.round(nextState.expandRight) !== Math.round(this.state.expandRight);
-    //}
-
-  }, {
-    key: 'setPosition',
-    value: function setPosition() {
-      var expandLeft, expandRight;
-      var rect = this.node.getBoundingClientRect();
-      var pageWidth = window.innerWidth;
-
-      if (this.props.fullBleed) {
-        expandLeft = Infinity;
-        expandRight = Infinity;
-      } else {
-        expandLeft = this.props.expandLeft === undefined ? this.props.expand : this.props.expandLeft;
-        expandRight = this.props.expandRight === undefined ? this.props.expand : this.props.expandRight;
-      }
-
-      var left = Math.max(rect.left - expandLeft, this.props.padding);
-      var right = Math.min(rect.right + expandRight, pageWidth - this.props.padding);
-
-      this.setState({
-        expandLeft: left - rect.left,
-        expandRight: rect.right - right
-      });
-    }
-  }, {
+  _createClass(_class, [{
     key: 'render',
     value: function render() {
-      var expandStyle = Object.assign({
-        marginLeft: this.state.expandLeft,
-        marginRight: this.state.expandRight
-      }, this.props.style || {});
-
-      return React.createElement(
-        'div',
-        {
-          style: this.props.style,
-          className: this.props.className
-        },
-        React.createElement(
-          'div',
-          { style: expandStyle },
-          this.props.children
-        )
-      );
-    }
-  }]);
-
-  return Container;
-}(React.Component);
-
-Container.defaultProps = {
-  padding: 15,
-  expand: 0,
-  fullBleed: false
-};
-
-module.exports = Container;
-
-},{"react":"/app/node_modules/react/react.js","react-dom":"/app/node_modules/react-dom/index.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/screen.js":[function(require,module,exports){
-'use strict';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Container = require('./container');
-
-var Screen = function (_React$Component) {
-  _inherits(Screen, _React$Component);
-
-  function Screen(props) {
-    _classCallCheck(this, Screen);
-
-    var _this = _possibleConstructorReturn(this, (Screen.__proto__ || Object.getPrototypeOf(Screen)).call(this, props));
-
-    _this.state = {
-      height: typeof window === 'undefined' ? 640 : window.innerHeight * _this.props.height
-    };
-    return _this;
-  }
-
-  _createClass(Screen, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      window.addEventListener('resize', function () {
-        _this2.setState({ height: window.innerHeight * _this2.props.height });
-      });
-      this.setState({
-        height: window.innerHeight * this.props.height
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var overlayStyle = {
-        position: 'relative',
-        height: this.state.height + 'px',
-        pointerEvents: 'none'
-      };
-
-      if (this.props.backgroundImage) {
-        overlayStyle.backgroundImage = 'url(' + this.props.backgroundImage + ')';
-        overlayStyle.backgroundSize = 'cover';
-        overlayStyle.backgroundPosition = 'top center';
-      }
-
-      var contentContainerStyle = Object.assign({
-        flexDirection: 'column',
+      var styles = {
         display: 'flex',
-        height: '100%'
-      }, this.props.contentContainerStyle || {});
-
-      var contentStyle = {
-        alignSelf: {
-          left: 'flex-start',
-          center: 'center',
-          right: 'flex-end',
-          stretch: 'stretch'
-        }[this.props.align] || 'flex-end',
-        pointerEvents: 'all'
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'url(' + this.props.img + ') center 0 no-repeat',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+        width: '100vw',
+        height: '100vh'
       };
 
-      return React.createElement(
-        Container,
-        { style: overlayStyle,
-          className: this.props.className,
-          fullBleed: this.props.fullBleed,
-          expand: this.props.expand,
-          expandLeft: this.props.expandLeft,
-          expandRight: this.props.expandRight,
-          padding: this.props.padding
-        },
-        React.createElement(
-          'div',
-          { style: contentContainerStyle },
-          React.createElement('div', { style: { display: 'flex', flex: this.props.position } }),
-          React.createElement(
-            'div',
-            { style: contentStyle },
-            this.props.children
-          ),
-          React.createElement('div', { style: { display: 'flex', flex: 1 - this.props.position } })
-        )
+      return _react2.default.createElement(
+        'div',
+        { style: styles },
+        this.props.children
       );
     }
   }]);
 
-  return Screen;
-}(React.Component);
+  return _class;
+}(_react.Component);
 
-Screen.defaultProps = {
-  position: 0.5,
-  fullBleed: false,
-  align: 'left',
-  height: 1
-};
+exports.default = _class;
 
-module.exports = Screen;
-
-},{"./container":"/app/tmp/Literasee/standard-error-of-measurement/components/container.js","react":"/app/node_modules/react/react.js","react-dom":"/app/node_modules/react-dom/index.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js":[function(require,module,exports){
+},{"react":"/app/node_modules/react/react.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js":[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -54747,22 +54538,21 @@ exports.default = _class;
 },{"idyll-component":"/app/node_modules/idyll-component/lib.js","react":"/app/node_modules/react/react.js"}],"__IDYLL_AST__":[function(require,module,exports){
 "use strict";
 
-module.exports = [["var", [["name", ["value", "randomSeed"]], ["value", ["value", 1]]], []], ["section", [], [["waypoint", [], [["div", [], [["Screen", [["fullBleed", ["value", true]], ["padding", ["value", 0]], ["height", ["value", 0.5]], ["className", ["value", "hero"]]], [["Img", [["src", ["value", "bjbxvz-uyc-jordan-mcqueen.jpg"]]], []]]], ["Header", [["title", ["value", "Standard Error of Measurement"]], ["author", ["value", "Center for Assessment"]], ["authorLink", ["value", "http://nciea.org/"]]], []]]]]], ["waypoint", [["center", ["value", true]]], [["p", [], ["\nWell hello there! To create a “screen” of text you can wrap\nblocks in ", ["code", [], ["[waypoint]Text here[/waypoint]"]], " tags."]], ["p", [], ["If you want the text vertically centered\non the page use ", ["code", [], ["[waypoint center:true]"]], " for the opening tag."]]]], ["waypoint", [], [["p", [], ["\nThe waypoint component is extremely basic right now\nand will evolve. We will also likely create a custom\nchart to sit over there on the side. The one currently there does not change at the moment."]], ["p", [], ["This slider will update the ", ["code", [], ["randomSeed"]], " var though."]], ["p", [], ["Update it: ", ["Range", [["min", ["value", 0]], ["max", ["value", 50]], ["value", ["variable", "randomSeed"]]], []]]], ["p", [], ["Scrolling to the next waypoint will set ", ["code", [], ["randomSeed"]], " to 25."]]]], ["waypoint", [["onEnteredView", ["expression", "randomSeed = 25"]]], ["\nOne more waypoint for good measure"]]]], ["fixed", [], [["p", [], ["\nrandomSeed var is: ", ["DisplayVar", [["var", ["variable", "randomSeed"]]], []]]], ["Chart", [["type", ["value", "scatter"]], ["randomSeed", ["variable", "randomSeed"]]], []]]]];
+module.exports = [["var", [["name", ["value", "randomSeed"]], ["value", ["value", 1]]], []], ["section", [], [["CoverImage", [["img", ["value", "bjbxvz-uyc-jordan-mcqueen.jpg"]]], [["Header", [["title", ["value", "Standard Error of Measurement"]], ["author", ["value", "Center for Assessment"]], ["authorLink", ["value", "http://nciea.org/"]]], []]]], ["waypoint", [["center", ["value", true]]], [["p", [], ["\nWell hello there! To create a “screen” of text you can wrap\nblocks in ", ["code", [], ["[waypoint]Text here[/waypoint]"]], " tags."]], ["p", [], ["If you want the text vertically centered\non the page use ", ["code", [], ["[waypoint center:true]"]], " for the opening tag."]]]], ["waypoint", [], [["p", [], ["\nThe waypoint component is extremely basic right now\nand will evolve. We will also likely create a custom\nchart to sit over there on the side. The one currently there does not change at the moment."]], ["p", [], ["This slider will update the ", ["code", [], ["randomSeed"]], " var though."]], ["p", [], ["Update it: ", ["Range", [["min", ["value", 0]], ["max", ["value", 50]], ["value", ["variable", "randomSeed"]]], []]]], ["p", [], ["Scrolling to the next waypoint will set ", ["code", [], ["randomSeed"]], " to 25."]]]], ["waypoint", [["onEnteredView", ["expression", "randomSeed = 25"]]], ["\nOne more waypoint for good measure"]]]], ["p", [], ["randomSeed var is: ", ["DisplayVar", [["var", ["variable", "randomSeed"]]], []]]], ["Chart", [["type", ["value", "scatter"]], ["randomSeed", ["variable", "randomSeed"]]], []]];
 
 },{}],"__IDYLL_COMPONENTS__":[function(require,module,exports){
 'use strict';
 
 module.exports = {
-	'waypoint': require('/app/tmp/Literasee/standard-error-of-measurement/components/waypoint'),
-	'screen': require('/app/tmp/Literasee/standard-error-of-measurement/components/screen'),
+	'cover-image': require('/app/tmp/Literasee/standard-error-of-measurement/components/cover-image'),
 	'header': require('/app/node_modules/idyll-default-components/header'),
+	'waypoint': require('/app/tmp/Literasee/standard-error-of-measurement/components/waypoint'),
 	'range': require('/app/node_modules/idyll-default-components/range'),
-	'fixed': require('/app/node_modules/idyll-default-components/fixed'),
 	'display-var': require('/app/node_modules/idyll-default-components/display-var'),
 	'chart': require('/app/node_modules/idyll-default-components/chart')
 };
 
-},{"/app/node_modules/idyll-default-components/chart":"/app/node_modules/idyll-default-components/chart.js","/app/node_modules/idyll-default-components/display-var":"/app/node_modules/idyll-default-components/display-var.js","/app/node_modules/idyll-default-components/fixed":"/app/node_modules/idyll-default-components/fixed.js","/app/node_modules/idyll-default-components/header":"/app/node_modules/idyll-default-components/header.js","/app/node_modules/idyll-default-components/range":"/app/node_modules/idyll-default-components/range.js","/app/tmp/Literasee/standard-error-of-measurement/components/screen":"/app/tmp/Literasee/standard-error-of-measurement/components/screen.js","/app/tmp/Literasee/standard-error-of-measurement/components/waypoint":"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js"}],"__IDYLL_DATA__":[function(require,module,exports){
+},{"/app/node_modules/idyll-default-components/chart":"/app/node_modules/idyll-default-components/chart.js","/app/node_modules/idyll-default-components/display-var":"/app/node_modules/idyll-default-components/display-var.js","/app/node_modules/idyll-default-components/header":"/app/node_modules/idyll-default-components/header.js","/app/node_modules/idyll-default-components/range":"/app/node_modules/idyll-default-components/range.js","/app/tmp/Literasee/standard-error-of-measurement/components/cover-image":"/app/tmp/Literasee/standard-error-of-measurement/components/cover-image.js","/app/tmp/Literasee/standard-error-of-measurement/components/waypoint":"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js"}],"__IDYLL_DATA__":[function(require,module,exports){
 "use strict";
 
 module.exports = {};
