@@ -10,7 +10,7 @@ export default class extends Component {
       backgroundSize: 'cover',
       backgroundAttachment: 'fixed',
       width: '100vw',
-      height: '100vh',
+      height: `${this.props.heightPercent || 100}vh`,
     }
 
     return (
