@@ -2,16 +2,13 @@
 
 [section]
 
-[waypoint]
-[Screen fullBleed:true padding:0 height:0.5 className:"hero"]
-  [Img src:"bjbxvz-uyc-jordan-mcqueen.jpg"/]
-[/Screen]
-[Header
-  title:"Standard Error of Measurement"
-  author:"Center for Assessment"
-  authorLink:"http://nciea.org/"
-/]
-[/waypoint]
+[CoverImage img:"bjbxvz-uyc-jordan-mcqueen.jpg"]
+  [Header
+    title:"Standard Error of Measurement"
+    author:"Center for Assessment"
+    authorLink:"http://nciea.org/"
+  /]
+[/CoverImage]
 
 [waypoint center:true]
 Well hello there! To create a "screen" of text you can wrap
@@ -39,8 +36,6 @@ One more waypoint for good measure
 
 [/section]
 
-[fixed]
 randomSeed var is: [DisplayVar var:randomSeed /]
 
 [Chart type:"scatter" randomSeed:randomSeed /]
-[/fixed]
