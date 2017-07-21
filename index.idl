@@ -2,7 +2,7 @@
 
 [section]
 
-[CoverImage img:"bjbxvz-uyc-jordan-mcqueen.jpg" heightPercent: 75]
+[CoverImage img:"bjbxvz-uyc-jordan-mcqueen.jpg" heightPercent:75]
   [Header
     title:"Standard Error of Measurement"
     author:"Center for Assessment"
