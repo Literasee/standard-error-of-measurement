@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class FeatureContent extends Component {
+class TextBlock extends Component {
   render() {
     return (
       <div
@@ -66,4 +66,4 @@ class FeatureContent extends Component {
   }
 }
 
-module.exports = FeatureAside
+module.exports = TextBlock
