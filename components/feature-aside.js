@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import Chart from 'idyll-default-components/Chart'
 
 export default props => {
-  console.log(props);
-
   return (
     <div
       style={{
@@ -19,7 +16,7 @@ export default props => {
         padding: '0 2rem'
       }}
     >
-      <Chart type="scatter" />
+      {props.children}
     </div>
   )
 }
