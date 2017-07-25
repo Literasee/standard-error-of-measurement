@@ -24735,7 +24735,196 @@ var _class = function (_Component) {
 
 exports.default = _class;
 
-},{"react":"/app/node_modules/react/react.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js":[function(require,module,exports){
+},{"react":"/app/node_modules/react/react.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/feature-content.js":[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+var FeatureContent = function (_React$Component) {
+  _inherits(FeatureContent, _React$Component);
+
+  function FeatureContent() {
+    _classCallCheck(this, FeatureContent);
+
+    return _possibleConstructorReturn(this, (FeatureContent.__proto__ || Object.getPrototypeOf(FeatureContent)).apply(this, arguments));
+  }
+
+  _createClass(FeatureContent, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        { style: this.props.style },
+        this.props.children
+      );
+    }
+  }]);
+
+  return FeatureContent;
+}(React.Component);
+
+module.exports = FeatureContent;
+
+},{"react":"/app/node_modules/react/react.js","react-dom":"/app/node_modules/react-dom/index.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/feature.js":[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+var IdyllComponent = require('idyll-component');
+var FeatureContent = require('./feature-content');
+
+var stateClasses = ['is-top', 'is-fixed', 'is-bottom'];
+
+var Feature = function (_IdyllComponent) {
+  _inherits(Feature, _IdyllComponent);
+
+  function Feature(props) {
+    _classCallCheck(this, Feature);
+
+    var _this = _possibleConstructorReturn(this, (Feature.__proto__ || Object.getPrototypeOf(Feature)).call(this, props));
+
+    _this.setFeature = _this.setFeature.bind(_this);
+    _this.setRoot = _this.setRoot.bind(_this);
+
+    _this.state = {
+      scrollState: 0,
+      featureMarginLeft: 0,
+      featureWidth: typeof window === 'undefined' ? 640 : window.innerWidth
+    };
+    return _this;
+  }
+
+  _createClass(Feature, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _get(Feature.prototype.__proto__ || Object.getPrototypeOf(Feature.prototype), 'componentDidMount', this) && _get(Feature.prototype.__proto__ || Object.getPrototypeOf(Feature.prototype), 'componentDidMount', this).call(this);
+      var node = ReactDOM.findDOMNode(this);
+    }
+  }, {
+    key: 'setRoot',
+    value: function setRoot(c) {
+      this.rootEl = window.rootEl = c;
+      this.initialize();
+    }
+  }, {
+    key: 'setFeature',
+    value: function setFeature(c) {
+      this.featureEl = window.featureEl = c;
+      this.initialize();
+    }
+  }, {
+    key: 'handleResize',
+    value: function handleResize() {
+      var rootRect = this.rootEl.getBoundingClientRect();
+      this.setState({
+        featureMarginLeft: -rootRect.left,
+        featureWidth: window.innerWidth,
+        featureHeight: window.innerHeight
+      });
+    }
+  }, {
+    key: 'handleScroll',
+    value: function handleScroll() {
+      if (!this.rootEl) return;
+      var rootRect = this.rootEl.getBoundingClientRect();
+
+      var position = rootRect.top / (window.innerHeight - rootRect.height);
+
+      // Update this whenever it changes so that the state is correctly adjusted:
+      this.setState({ scrollState: position < 0 ? 0 : position <= 1 ? 1 : 2 }
+
+      // Only update the value when onscreen:
+      );if (rootRect.top < window.innerHeight && rootRect.bottom > 0) {
+        this.updateProps({ value: position });
+      }
+    }
+  }, {
+    key: 'initialize',
+    value: function initialize() {
+      if (!this.rootEl || !this.featureEl) return;
+
+      this.handleResize();
+      window.addEventListener('resize', this.handleResize.bind(this));
+      window.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var feature = void 0;
+      var ps = this.state.scrollState;
+      var featureStyles = {
+        width: this.state.featureWidth + 'px',
+        height: this.state.featureHeight + 'px',
+        marginLeft: ps === 1 ? 0 : this.state.featureMarginLeft + 'px',
+        position: ps === 1 ? 'fixed' : 'absolute',
+        bottom: ps === 2 ? 0 : 'auto'
+      };
+
+      if (ps === 1) {
+        featureStyles.top = 0;
+        featureStyles.right = 0;
+        featureStyles.bottom = 0;
+        featureStyles.left = 0;
+      }
+
+      var rootStyles = {
+        position: 'relative',
+        marginLeft: 0,
+        marginRight: 0
+      };
+
+      var featureChild = this.props.children.filter(function (c) {
+        return c.type.__proto__ === FeatureContent;
+      })[0];
+      var nonFeatureChildren = this.props.children.filter(function (c) {
+        return c.type.__proto__ !== FeatureContent;
+      });
+
+      if (featureChild) {
+        feature = React.cloneElement(featureChild, {
+          style: featureStyles,
+          ref: this.setFeature
+        });
+      }
+
+      return React.createElement(
+        'figure',
+        {
+          style: rootStyles,
+          className: 'idyll-feature ' + stateClasses[this.state.scrollState],
+          ref: this.setRoot
+        },
+        feature,
+        nonFeatureChildren
+      );
+    }
+  }]);
+
+  return Feature;
+}(IdyllComponent);
+
+module.exports = Feature;
+
+},{"./feature-content":"/app/tmp/Literasee/standard-error-of-measurement/components/feature-content.js","idyll-component":"/app/node_modules/idyll-component/lib.js","react":"/app/node_modules/react/react.js","react-dom":"/app/node_modules/react-dom/index.js"}],"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js":[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24795,7 +24984,7 @@ exports.default = _class;
 },{"idyll-component":"/app/node_modules/idyll-component/lib.js","react":"/app/node_modules/react/react.js"}],"__IDYLL_AST__":[function(require,module,exports){
 "use strict";
 
-module.exports = [["var", [["name", ["value", "randomSeed"]], ["value", ["value", 1]]], []], ["section", [], [["CoverImage", [["img", ["value", "bjbxvz-uyc-jordan-mcqueen.jpg"]], ["heightPercent", ["value", 75]]], [["Header", [["title", ["value", "Standard Error of Measurement"]], ["author", ["value", "Center for Assessment"]], ["authorLink", ["value", "http://nciea.org/"]]], []]]], ["waypoint", [["center", ["value", true]]], [["p", [], ["\nWell hello there! To create a “screen” of text you can wrap\nblocks in ", ["code", [], ["[waypoint]Text here[/waypoint]"]], " tags."]], ["p", [], ["If you want the text vertically centered\non the page use ", ["code", [], ["[waypoint center:true]"]], " for the opening tag."]]]], ["waypoint", [], [["p", [], ["\nThe waypoint component is extremely basic right now\nand will evolve. We will also likely create a custom\nchart to sit over there on the side. The one currently there does not change at the moment."]], ["p", [], ["This slider will update the ", ["code", [], ["randomSeed"]], " var though."]], ["p", [], ["Update it: ", ["Range", [["min", ["value", 0]], ["max", ["value", 50]], ["value", ["variable", "randomSeed"]]], []]]], ["p", [], ["Scrolling to the next waypoint will set ", ["code", [], ["randomSeed"]], " to 25."]]]], ["waypoint", [["onEnteredView", ["expression", "randomSeed = 25"]]], ["\nOne more waypoint for good measure"]]]]];
+module.exports = [["var", [["name", ["value", "randomSeed"]], ["value", ["value", 1]]], []], ["section", [], [["CoverImage", [["img", ["value", "bjbxvz-uyc-jordan-mcqueen.jpg"]], ["heightPercent", ["value", 75]]], [["Header", [["title", ["value", "Standard Error of Measurement"]], ["author", ["value", "Center for Assessment"]], ["authorLink", ["value", "http://nciea.org/"]]], []]]], ["waypoint", [["center", ["value", true]]], [["p", [], ["\nWell hello there! To create a “screen” of text you can wrap\nblocks in ", ["code", [], ["[waypoint]Text here[/waypoint]"]], " tags."]], ["p", [], ["If you want the text vertically centered\non the page use ", ["code", [], ["[waypoint center:true]"]], " for the opening tag."]]]], ["Feature", [], [["FeatureContent", [], ["\n        Hi\n    "]]]], ["waypoint", [], [["p", [], ["\nThe waypoint component is extremely basic right now\nand will evolve. We will also likely create a custom\nchart to sit over there on the side. The one currently there does not change at the moment."]], ["p", [], ["This slider will update the ", ["code", [], ["randomSeed"]], " var though."]], ["p", [], ["Update it: ", ["Range", [["min", ["value", 0]], ["max", ["value", 50]], ["value", ["variable", "randomSeed"]]], []]]], ["p", [], ["Scrolling to the next waypoint will set ", ["code", [], ["randomSeed"]], " to 25."]]]], ["waypoint", [["onEnteredView", ["expression", "randomSeed = 25"]]], ["\nOne more waypoint for good measure"]]]]];
 
 },{}],"__IDYLL_COMPONENTS__":[function(require,module,exports){
 'use strict';
@@ -24804,10 +24993,12 @@ module.exports = {
 	'cover-image': require('/app/tmp/Literasee/standard-error-of-measurement/components/cover-image'),
 	'header': require('/app/node_modules/idyll-default-components/header'),
 	'waypoint': require('/app/tmp/Literasee/standard-error-of-measurement/components/waypoint'),
+	'feature': require('/app/tmp/Literasee/standard-error-of-measurement/components/feature'),
+	'feature-content': require('/app/tmp/Literasee/standard-error-of-measurement/components/feature-content'),
 	'range': require('/app/node_modules/idyll-default-components/range')
 };
 
-},{"/app/node_modules/idyll-default-components/header":"/app/node_modules/idyll-default-components/header.js","/app/node_modules/idyll-default-components/range":"/app/node_modules/idyll-default-components/range.js","/app/tmp/Literasee/standard-error-of-measurement/components/cover-image":"/app/tmp/Literasee/standard-error-of-measurement/components/cover-image.js","/app/tmp/Literasee/standard-error-of-measurement/components/waypoint":"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js"}],"__IDYLL_DATA__":[function(require,module,exports){
+},{"/app/node_modules/idyll-default-components/header":"/app/node_modules/idyll-default-components/header.js","/app/node_modules/idyll-default-components/range":"/app/node_modules/idyll-default-components/range.js","/app/tmp/Literasee/standard-error-of-measurement/components/cover-image":"/app/tmp/Literasee/standard-error-of-measurement/components/cover-image.js","/app/tmp/Literasee/standard-error-of-measurement/components/feature":"/app/tmp/Literasee/standard-error-of-measurement/components/feature.js","/app/tmp/Literasee/standard-error-of-measurement/components/feature-content":"/app/tmp/Literasee/standard-error-of-measurement/components/feature-content.js","/app/tmp/Literasee/standard-error-of-measurement/components/waypoint":"/app/tmp/Literasee/standard-error-of-measurement/components/waypoint.js"}],"__IDYLL_DATA__":[function(require,module,exports){
 "use strict";
 
 module.exports = {};

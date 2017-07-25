@@ -18,6 +18,12 @@ If you want the text vertically centered
 on the page use `[waypoint center:true]` for the opening tag.
 [/waypoint]
 
+[Feature]
+    [FeatureContent]
+        Hi
+    [/FeatureContent]
+[/Feature]
+
 [waypoint]
 The waypoint component is extremely basic right now
 and will evolve. We will also likely create a custom
