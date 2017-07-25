@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class FeatureContent extends Component {
+class FeatureAside extends Component {
   render() {
     return (
       <div
