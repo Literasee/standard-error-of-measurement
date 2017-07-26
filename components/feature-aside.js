@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-const IdyllComponent = require('idyll-component')
 
-class FeatureAside extends IdyllComponent {
+class FeatureAside extends Component {
   render() {
     return (
       <div
