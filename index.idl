@@ -16,18 +16,25 @@ blocks in `[waypoint]Text here[/waypoint]` tags.
 If you want the text vertically centered
 on the page use `[waypoint center:true]` for the opening tag.
 
+[var name:"slide" value:"images/01.png" /]
+
 [Feature]
   [FeatureContent]
     [FeatureAside]
-      [Chart type:"scatter" /]
+      [img src:slide /]
     [/FeatureAside]
   [/FeatureContent]
 
-  [TextBlock/]
-  [TextBlock/]
-  [TextBlock/]
-  [TextBlock/]
-  [TextBlock/]
+  [TextBlock onEnterView:`slide = "images/01.png"` /]
+  [TextBlock onEnterView:`slide = "images/02.png"` /]
+  [TextBlock onEnterView:`slide = "images/03.png"` /]
+  [TextBlock onEnterView:`slide = "images/04.png"` /]
+  [TextBlock onEnterView:`slide = "images/05.png"` /]
+  [TextBlock onEnterView:`slide = "images/06.png"` /]
+  [TextBlock onEnterView:`slide = "images/07.png"` /]
+  [TextBlock onEnterView:`slide = "images/08.png"` /]
+  [TextBlock onEnterView:`slide = "images/09.png"` /]
+  [TextBlock onEnterView:`slide = "images/10.png"` /]
 [/Feature]
 
 [waypoint]
