@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import IdyllComponent from 'idyll-component'
 
-class TextBlock extends Component {
+class TextBlock extends IdyllComponent {
   render() {
     return (
       <div
@@ -59,7 +60,7 @@ class TextBlock extends Component {
         <p>
           Placeat illum fugiat voluptas saepe deserunt iste odit ipsam alias beatae unde rerum
           maxime dolore, magnam nostrum quia enim, ad non nobis ipsum! Veritatis magnam deleniti ab
-          est accusantium porros.
+          est accusantium porro.
         </p>
       </div>
     )
