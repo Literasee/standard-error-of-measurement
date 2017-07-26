@@ -10,13 +10,11 @@
   /]
 [/CoverImage]
 
-[waypoint]
-Well hello there!! To create a "screen" of text you can wrap
+Well hello there! To create a "screen" of text you can wrap
 blocks in `[waypoint]Text here[/waypoint]` tags.
 
 If you want the text vertically centered
 on the page use `[waypoint center:true]` for the opening tag.
-[/waypoint]
 
 [Feature]
   [FeatureContent]
