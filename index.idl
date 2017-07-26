@@ -2,7 +2,7 @@
 
 [section]
 
-[CoverImage img:"bjbxvz-uyc-jordan-mcqueen.jpg" heightPercent:75]
+[CoverImage img:"bjbxvz-uyc-jordan-mcqueen.jpg" heightPercent:95]
   [Header
     title:"Standard Error of Measurement"
     author:"Center for Assessment"
@@ -10,7 +10,7 @@
   /]
 [/CoverImage]
 
-[waypoint center:true]
+[waypoint]
 Well hello there!! To create a "screen" of text you can wrap
 blocks in `[waypoint]Text here[/waypoint]` tags.
 
@@ -44,7 +44,7 @@ Update it: [Range min:0 max:50 value:randomSeed /]
 Scrolling to the next waypoint will set `randomSeed` to 25.
 [/waypoint]
 
-[waypoint onEnteredView:`randomSeed = 25`]
+[waypoint center:true onEnteredView:`randomSeed = 25`]
 One more waypoint for good measure
 [/waypoint]
 
