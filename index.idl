@@ -19,9 +19,17 @@ on the page use `[waypoint center:true]` for the opening tag.
 [/waypoint]
 
 [Feature]
-    [FeatureContent]
-        Hi
-    [/FeatureContent]
+  [FeatureContent]
+    [FeatureAside]
+      [Chart type:"scatter" /]
+    [/FeatureAside]
+  [/FeatureContent]
+
+  [TextBlock/]
+  [TextBlock/]
+  [TextBlock/]
+  [TextBlock/]
+  [TextBlock/]
 [/Feature]
 
 [waypoint]
